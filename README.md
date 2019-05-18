@@ -1,10 +1,10 @@
 # Premier cours
 
-## Pré-requis
+## Prï¿½-requis
 Pour faire du java on a besoin d'un IDE.
 <ul>
-<li>[Eclipse](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2019-03/R/eclipse-inst-win64.exe)</li>
-<li>[intellij](https://www.jetbrains.com/idea/download/#section=windows)</li>
+<li>[Eclipse] (https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2019-03/R/eclipse-inst-win64.exe)</li>
+<li>[intellij] (https://www.jetbrains.com/idea/download/#section=windows)</li>
 </ul>
 
 Tu auras aussi besoin de [git](https://git-scm.com/download/win) et d'une jdk on va prendre une [jdk8](https://adoptopenjdk.net/). 
@@ -13,15 +13,15 @@ Tu auras aussi besoin de [git](https://git-scm.com/download/win) et d'une jdk on
 
 ### les variables
 
-En java pour définir une variable il suffit de faire : 
+En java pour dï¿½finir une variable il suffit de faire : 
 
 ``` java
 	int test = 0;
 ```
 
-Avec ce code on définie une variable <b>test</b> qui aura une valeur <b>0</b> de type primitif <b>int</b>.
+Avec ce code on dï¿½finie une variable <b>test</b> qui aura une valeur <b>0</b> de type primitif <b>int</b>.
 #### type de variable
-Il y a deux types de variable, soit on donne à la variable un type primitif:
+Il y a deux types de variable, soit on donne ï¿½ la variable un type primitif:
 
 #### type primitive
 
@@ -32,25 +32,25 @@ Il y a deux types de variable, soit on donne à la variable un type primitif:
 <li><b>int</b> : (4 octets ) entiers compris entre -2147483648 et +2147483647 (-231 et 231-1)</li>
 <li><b>float</b> : ( 4 octets )  dans ce cas max vaut 255 : ensemble des nombres [-3.40282347E38 .. -1.40239846E-45], 0, [1.40239846E-45 .. 3.40282347E38]</li>
 <li><b>double</b> : ( 8 octets ) dans ce cas max vaut 2047 : ensemble des nombres [-1.79769313486231570E308 .. -4.94065645841246544E-324], 0, [4.94065645841246544E-324 .. 1.79769313486231570E308]</li>
-<li><b>char</b> : Ensemble des valeurs unicode ( valeurs de ’\u0000’ à ’\uffff’ avec 4 chiffres obligatoires après ’\u’) Les 128 premiers caractères sont les codes ASCII et se notent entre apostrophes : ’a’, ’1’, ’\’’, ’\n’.
-Compléments d’information sur Unicode, et aussi ici.
-Un caractère est représenté sur 2 octets.</li>
+<li><b>char</b> : Ensemble des valeurs unicode ( valeurs de ï¿½\u0000ï¿½ ï¿½ ï¿½\uffffï¿½ avec 4 chiffres obligatoires aprï¿½s ï¿½\uï¿½) Les 128 premiers caractï¿½res sont les codes ASCII et se notent entre apostrophes : ï¿½aï¿½, ï¿½1ï¿½, ï¿½\ï¿½ï¿½, ï¿½\nï¿½.
+Complï¿½ments dï¿½information sur Unicode, et aussi ici.
+Un caractï¿½re est reprï¿½sentï¿½ sur 2 octets.</li>
 </ul>
 
 #### type d'objet
 
-Le type peut être un Objet soit qu'on récupère dans une librairie soit une classe qu'on a créé. Par exemple : 
+Le type peut ï¿½tre un Objet soit qu'on rï¿½cupï¿½re dans une librairie soit une classe qu'on a crï¿½ï¿½. Par exemple : 
 
 ``` java
 	String test = "coucou";
 ```
 
 
-Avec ce code on définie une variable <b>test</b> qui aura une valeur <b>coucou</b> de type primitif <b>String</b> qui est une classe de la librairie <b>java.lang</b>.
+Avec ce code on dï¿½finie une variable <b>test</b> qui aura une valeur <b>coucou</b> de type primitif <b>String</b> qui est une classe de la librairie <b>java.lang</b>.
 
 ### les conditions 
 
-Les conditions en java sont gérés de cette manière :
+Les conditions en java sont gï¿½rï¿½s de cette maniï¿½re :
 
 ``` java
 if(test!=0){
@@ -58,7 +58,7 @@ if(test!=0){
 }
 ```
 
-on peut également faire un si la condition est respecté et si la condition n'est pas respecté de cette manière :
+on peut ï¿½galement faire un si la condition est respectï¿½ et si la condition n'est pas respectï¿½ de cette maniï¿½re :
 
 ``` java
 if(test!=0){
@@ -68,7 +68,7 @@ if(test!=0){
 }
 ```
 
-on peut aussi faire une mécanique de si cette condition est respecté si une autre conditon est respecté ou sinon de cette manière :
+on peut aussi faire une mï¿½canique de si cette condition est respectï¿½ si une autre conditon est respectï¿½ ou sinon de cette maniï¿½re :
 
 ``` java
 if(test>0){
@@ -82,7 +82,7 @@ else{
 }
 ```
 
-on peut également faire des switch en java : 
+on peut ï¿½galement faire des switch en java : 
 
 
 ``` java
@@ -114,7 +114,7 @@ switch (day) {
 
 
 
-#### les différents opérateurs 
+#### les diffï¿½rents opï¿½rateurs 
 
 Comparaison :
 
@@ -168,7 +168,7 @@ do {
 ``` java 
 while (/* Condition */)
 {
-  //Instructions à répéter
+  //Instructions ï¿½ rï¿½pï¿½ter
 }
 ```
 
@@ -185,7 +185,7 @@ java -jar RPGFight-0.0.1-SNAPSHOT.jar
 
 un "yo" devrait apparaitre.
 
-le code derrière ça est assez simple il est dans ma classe Main.java 
+le code derriï¿½re ï¿½a est assez simple il est dans ma classe Main.java 
 
 
 ``` java 
@@ -198,3 +198,95 @@ public class Main {
 ```
 
 Cette classe Main sera la classe qui va permettre de lancer notre projet.
+
+# Exercice 1
+
+Faire bouger un personnage sur un terrain.
+
+Faire un terrain de 5 X 5. Ce terrain sera un tableau de deux dimensions.
+Exemple de tableau en deux dimensions en java : 
+``` java
+
+char[][] terrain = new char[4][4];
+
+```
+### PremiÃ¨re Ã©tape : 
+
+afficher le terrain dans la console. Chaque case sera reprÃ©sentÃ© par un point. Et il faudra placer sur ce terrain sur la case [0][0] un caractÃ¨re o qui reprÃ©sentera notre personnage.
+La methode qui permet en java d'afficher quelque chose dans la console est : 
+``` java
+System.out.print("o");
+```
+
+rÃ©sultat voulue : 
+
+``` 
+o....    
+.....    
+.....
+.....
+.....
+```
+### DeuxiÃ¨me Ã©tape :
+
+Il faudra dans un deuxiÃ¨me temps pouvoir dÃ©placer le personnage. Une fois la premiÃ¨re Ã©tape est que tu as ce rÃ©sultat : 
+
+``` 
+o....    
+.....    
+.....
+.....
+.....
+```
+
+il faudra attendre que l'utilisateur tape sur une touche soit z ( le personnage monte si c'est possible) soit s (le personnage descend si c'est possible) soit q (le personnage va a gauche si c'est possible) soit d (le personnage va Ã  droite si c'est possible).
+Exemple: 
+
+
+``` 
+o....    
+.....    
+.....
+.....
+.....
+```
+l'utilisateur appui sur d
+
+``` 
+.o...    
+.....    
+.....
+.....
+.....
+```
+l'utilisateur appui sur s
+
+``` 
+.....    
+.o...    
+.....
+.....
+.....
+```
+l'utilisateur appui sur q
+
+``` 
+.....    
+o....    
+.....
+.....
+.....
+```
+
+l'utilisateur appui sur z
+
+``` 
+o....    
+.....    
+.....
+.....
+.....
+```
+
+Ce n'est pas grave si Ã§a ne clear pas la console mais si je met dans ma console "exit" mon programme s'arrÃªte.
+

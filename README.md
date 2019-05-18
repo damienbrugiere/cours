@@ -1,6 +1,6 @@
 # Premier cours
 
-## Prï¿½-requis
+## Pré-requis
 Pour faire du java on a besoin d'un IDE.
 <ul>
 <li>[Eclipse] (https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2019-03/R/eclipse-inst-win64.exe)</li>
@@ -13,15 +13,15 @@ Tu auras aussi besoin de [git](https://git-scm.com/download/win) et d'une jdk on
 
 ### les variables
 
-En java pour dï¿½finir une variable il suffit de faire : 
+En java pour définir une variable il suffit de faire : 
 
 ``` java
 	int test = 0;
 ```
 
-Avec ce code on dï¿½finie une variable <b>test</b> qui aura une valeur <b>0</b> de type primitif <b>int</b>.
+Avec ce code on définie une variable <b>test</b> qui aura une valeur <b>0</b> de type primitif <b>int</b>.
 #### type de variable
-Il y a deux types de variable, soit on donne ï¿½ la variable un type primitif:
+Il y a deux types de variable, soit on donne é la variable un type primitif:
 
 #### type primitive
 
@@ -32,25 +32,25 @@ Il y a deux types de variable, soit on donne ï¿½ la variable un type primitif:
 <li><b>int</b> : (4 octets ) entiers compris entre -2147483648 et +2147483647 (-231 et 231-1)</li>
 <li><b>float</b> : ( 4 octets )  dans ce cas max vaut 255 : ensemble des nombres [-3.40282347E38 .. -1.40239846E-45], 0, [1.40239846E-45 .. 3.40282347E38]</li>
 <li><b>double</b> : ( 8 octets ) dans ce cas max vaut 2047 : ensemble des nombres [-1.79769313486231570E308 .. -4.94065645841246544E-324], 0, [4.94065645841246544E-324 .. 1.79769313486231570E308]</li>
-<li><b>char</b> : Ensemble des valeurs unicode ( valeurs de ï¿½\u0000ï¿½ ï¿½ ï¿½\uffffï¿½ avec 4 chiffres obligatoires aprï¿½s ï¿½\uï¿½) Les 128 premiers caractï¿½res sont les codes ASCII et se notent entre apostrophes : ï¿½aï¿½, ï¿½1ï¿½, ï¿½\ï¿½ï¿½, ï¿½\nï¿½.
-Complï¿½ments dï¿½information sur Unicode, et aussi ici.
-Un caractï¿½re est reprï¿½sentï¿½ sur 2 octets.</li>
+<li><b>char</b> : Ensemble des valeurs unicode ( valeurs de é\u0000é é é\uffffé avec 4 chiffres obligatoires aprés é\ué) Les 128 premiers caractéres sont les codes ASCII et se notent entre apostrophes : éaé, é1é, é\é, é\né.
+Compléments déinformation sur Unicode, et aussi ici.
+Un caractére est représenté sur 2 octets.</li>
 </ul>
 
 #### type d'objet
 
-Le type peut ï¿½tre un Objet soit qu'on rï¿½cupï¿½re dans une librairie soit une classe qu'on a crï¿½ï¿½. Par exemple : 
+Le type peut étre un Objet soit qu'on récupére dans une librairie soit une classe qu'on a cré. Par exemple : 
 
 ``` java
 	String test = "coucou";
 ```
 
 
-Avec ce code on dï¿½finie une variable <b>test</b> qui aura une valeur <b>coucou</b> de type primitif <b>String</b> qui est une classe de la librairie <b>java.lang</b>.
+Avec ce code on définie une variable <b>test</b> qui aura une valeur <b>coucou</b> de type primitif <b>String</b> qui est une classe de la librairie <b>java.lang</b>.
 
 ### les conditions 
 
-Les conditions en java sont gï¿½rï¿½s de cette maniï¿½re :
+Les conditions en java sont gérés de cette maniére :
 
 ``` java
 if(test!=0){
@@ -58,7 +58,7 @@ if(test!=0){
 }
 ```
 
-on peut ï¿½galement faire un si la condition est respectï¿½ et si la condition n'est pas respectï¿½ de cette maniï¿½re :
+on peut également faire un si la condition est respecté et si la condition n'est pas respecté de cette maniére :
 
 ``` java
 if(test!=0){
@@ -68,7 +68,7 @@ if(test!=0){
 }
 ```
 
-on peut aussi faire une mï¿½canique de si cette condition est respectï¿½ si une autre conditon est respectï¿½ ou sinon de cette maniï¿½re :
+on peut aussi faire une mécanique de si cette condition est respecté si une autre conditon est respecté ou sinon de cette mani?re :
 
 ``` java
 if(test>0){
@@ -82,7 +82,7 @@ else{
 }
 ```
 
-on peut ï¿½galement faire des switch en java : 
+on peut également faire des switch en java : 
 
 
 ``` java
@@ -114,7 +114,7 @@ switch (day) {
 
 
 
-#### les diffï¿½rents opï¿½rateurs 
+#### les différents opérateurs 
 
 Comparaison :
 
@@ -168,7 +168,7 @@ do {
 ``` java 
 while (/* Condition */)
 {
-  //Instructions ï¿½ rï¿½pï¿½ter
+  //Instructions é répéter
 }
 ```
 
@@ -185,7 +185,7 @@ java -jar RPGFight-0.0.1-SNAPSHOT.jar
 
 un "yo" devrait apparaitre.
 
-le code derriï¿½re ï¿½a est assez simple il est dans ma classe Main.java 
+le code derriére éa est assez simple il est dans ma classe Main.java 
 
 
 ``` java 
@@ -210,15 +210,15 @@ Exemple de tableau en deux dimensions en java :
 char[][] terrain = new char[4][4];
 
 ```
-### PremiÃ¨re Ã©tape : 
+### Premiere étape : 
 
-afficher le terrain dans la console. Chaque case sera reprÃ©sentÃ© par un point. Et il faudra placer sur ce terrain sur la case [0][0] un caractÃ¨re o qui reprÃ©sentera notre personnage.
+afficher le terrain dans la console. Chaque case sera représenté par un point. Et il faudra placer sur ce terrain sur la case [0][0] un caract?re o qui représentera notre personnage.
 La methode qui permet en java d'afficher quelque chose dans la console est : 
 ``` java
 System.out.print("o");
 ```
 
-rÃ©sultat voulue : 
+résultat voulue : 
 
 ``` 
 o....    
@@ -227,9 +227,9 @@ o....
 .....
 .....
 ```
-### DeuxiÃ¨me Ã©tape :
+### Deuxieme étape :
 
-Il faudra dans un deuxiÃ¨me temps pouvoir dÃ©placer le personnage. Une fois la premiÃ¨re Ã©tape est que tu as ce rÃ©sultat : 
+Il faudra dans un deuxi?me temps pouvoir déplacer le personnage. Une fois la premi?re étape est que tu as ce résultat : 
 
 ``` 
 o....    
@@ -239,7 +239,7 @@ o....
 .....
 ```
 
-il faudra attendre que l'utilisateur tape sur une touche soit z ( le personnage monte si c'est possible) soit s (le personnage descend si c'est possible) soit q (le personnage va a gauche si c'est possible) soit d (le personnage va Ã  droite si c'est possible).
+il faudra attendre que l'utilisateur tape sur une touche soit z ( le personnage monte si c'est possible) soit s (le personnage descend si c'est possible) soit q (le personnage va ? gauche si c'est possible) soit d (le personnage va ? droite si c'est possible).
 Exemple: 
 
 
@@ -288,5 +288,5 @@ o....
 .....
 ```
 
-Ce n'est pas grave si Ã§a ne clear pas la console mais si je met dans ma console "exit" mon programme s'arrÃªte.
+Ce n'est pas grave si ça ne clear pas la console mais si je met dans ma console "exit" mon programme s'arr?te.
 

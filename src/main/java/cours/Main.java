@@ -12,42 +12,32 @@ import java.util.Scanner;
  */
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)  {
 		char[][] terrain = new char[4][4];
 		int persoI = 0;
 		int persoJ = 0;
 		String in = null;
 		Scanner sc = new Scanner(System.in);
+		
 		do {
-			if (in != null) {
-				switch (in) {
-				case "z":
-					if(persoI!=0) {
-						persoI--;
-					}
-					break;
-				case "q":
-					if(persoJ!=0) {
-						persoJ--;
-					}
-					break;
-				case "d":
-					if(persoJ!=4) {
-						persoJ++;
-					}
-					break;
-				case "s":
-					if(persoI!=4) {
-						persoI++;
-					}
-					break;
-				default:
-					break;
-				}
+			System.out.print("\033[H\033[2J");  
+			System.out.flush();
+			if ("z".equals(in) && persoI != 0) {
+				persoI--;
+			}
+
+			if ("q".equals(in) && persoJ != 0) {
+				persoJ--;
+			}
+			if ("d".equals(in) && persoJ != 4) {
+				persoJ++;
+			}
+			if ("s".equals(in) && persoI != 4) {
+				persoI++;
 			}
 			display(terrain, persoI, persoJ);
 			in = sc.nextLine();
-		} while (!in.equals("exit"));
+		} while (!"exit".equals(in));
 
 	}
 

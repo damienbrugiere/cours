@@ -1,6 +1,6 @@
 # Premier cours
 
-## PrÈ-requis
+## Pr√©-requis
 Pour faire du java on a besoin d'un IDE.
 <ul>
 <li>[Eclipse] (https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2019-03/R/eclipse-inst-win64.exe)</li>
@@ -13,15 +13,15 @@ Tu auras aussi besoin de [git](https://git-scm.com/download/win) et d'une jdk on
 
 ### les variables
 
-En java pour dÈfinir une variable il suffit de faire : 
+En java pour d√©finir une variable il suffit de faire : 
 
 ``` java
 	int test = 0;
 ```
 
-Avec ce code on dÈfinie une variable <b>test</b> qui aura une valeur <b>0</b> de type primitif <b>int</b>.
+Avec ce code on d√©finie une variable <b>test</b> qui aura une valeur <b>0</b> de type primitif <b>int</b>.
 #### type de variable
-Il y a deux types de variable, soit on donne È la variable un type primitif:
+Il y a deux types de variable, soit on donne √© la variable un type primitif:
 
 #### type primitive
 
@@ -32,25 +32,25 @@ Il y a deux types de variable, soit on donne È la variable un type primitif:
 <li><b>int</b> : (4 octets ) entiers compris entre -2147483648 et +2147483647 (-231 et 231-1)</li>
 <li><b>float</b> : ( 4 octets )  dans ce cas max vaut 255 : ensemble des nombres [-3.40282347E38 .. -1.40239846E-45], 0, [1.40239846E-45 .. 3.40282347E38]</li>
 <li><b>double</b> : ( 8 octets ) dans ce cas max vaut 2047 : ensemble des nombres [-1.79769313486231570E308 .. -4.94065645841246544E-324], 0, [4.94065645841246544E-324 .. 1.79769313486231570E308]</li>
-<li><b>char</b> : Ensemble des valeurs unicode ( valeurs de È\u0000È È È\uffffÈ avec 4 chiffres obligatoires aprÈs È\uÈ) Les 128 premiers caractÈres sont les codes ASCII et se notent entre apostrophes : ÈaÈ, È1È, È\È, È\nÈ.
-ComplÈments dÈinformation sur Unicode, et aussi ici.
-Un caractÈre est reprÈsentÈ sur 2 octets.</li>
+<li><b>char</b> : Ensemble des valeurs unicode ( valeurs de √©\u0000√© √© √©\uffff√© avec 4 chiffres obligatoires apr√©s √©\u√©) Les 128 premiers caract√©res sont les codes ASCII et se notent entre apostrophes : √©a√©, √©1√©, √©\√©, √©\n√©.
+Compl√©ments d√©information sur Unicode, et aussi ici.
+Un caract√©re est repr√©sent√© sur 2 octets.</li>
 </ul>
 
 #### type d'objet
 
-Le type peut Ètre un Objet soit qu'on rÈcupÈre dans une librairie soit une classe qu'on a crÈ. Par exemple : 
+Le type peut √©tre un Objet soit qu'on r√©cup√©re dans une librairie soit une classe qu'on a cr√©. Par exemple : 
 
 ``` java
 	String test = "coucou";
 ```
 
 
-Avec ce code on dÈfinie une variable <b>test</b> qui aura une valeur <b>coucou</b> de type primitif <b>String</b> qui est une classe de la librairie <b>java.lang</b>.
+Avec ce code on d√©finie une variable <b>test</b> qui aura une valeur <b>coucou</b> de type primitif <b>String</b> qui est une classe de la librairie <b>java.lang</b>.
 
 ### les conditions 
 
-Les conditions en java sont gÈrÈs de cette maniÈre :
+Les conditions en java sont g√©r√©s de cette mani√©re :
 
 ``` java
 if(test!=0){
@@ -58,7 +58,7 @@ if(test!=0){
 }
 ```
 
-on peut Ègalement faire un si la condition est respectÈ et si la condition n'est pas respectÈ de cette maniÈre :
+on peut √©galement faire un si la condition est respect√© et si la condition n'est pas respect√© de cette mani√©re :
 
 ``` java
 if(test!=0){
@@ -68,7 +68,7 @@ if(test!=0){
 }
 ```
 
-on peut aussi faire une mÈcanique de si cette condition est respectÈ si une autre conditon est respectÈ ou sinon de cette mani?re :
+on peut aussi faire une m√©canique de si cette condition est respect√© si une autre conditon est respect√© ou sinon de cette mani?re :
 
 ``` java
 if(test>0){
@@ -82,7 +82,7 @@ else{
 }
 ```
 
-on peut Ègalement faire des switch en java : 
+on peut √©galement faire des switch en java : 
 
 
 ``` java
@@ -114,7 +114,7 @@ switch (day) {
 
 
 
-#### les diffÈrents opÈrateurs 
+#### les diff√©rents op√©rateurs 
 
 Comparaison :
 
@@ -168,7 +168,7 @@ do {
 ``` java 
 while (/* Condition */)
 {
-  //Instructions È rÈpÈter
+  //Instructions √© r√©p√©ter
 }
 ```
 
@@ -185,7 +185,7 @@ java -jar RPGFight-0.0.1-SNAPSHOT.jar
 
 un "yo" devrait apparaitre.
 
-le code derriÈre Èa est assez simple il est dans ma classe Main.java 
+le code derri√©re √©a est assez simple il est dans ma classe Main.java 
 
 
 ``` java 
@@ -210,15 +210,15 @@ Exemple de tableau en deux dimensions en java :
 char[][] terrain = new char[4][4];
 
 ```
-### Premiere Ètape : 
+### Premiere √©tape : 
 
-afficher le terrain dans la console. Chaque case sera reprÈsentÈ par un point. Et il faudra placer sur ce terrain sur la case [0][0] un caract?re o qui reprÈsentera notre personnage.
+afficher le terrain dans la console. Chaque case sera repr√©sent√© par un point. Et il faudra placer sur ce terrain sur la case [0][0] un caract?re o qui repr√©sentera notre personnage.
 La methode qui permet en java d'afficher quelque chose dans la console est : 
 ``` java
 System.out.print("o");
 ```
 
-rÈsultat voulue : 
+r√©sultat voulue : 
 
 ``` 
 o....    
@@ -227,9 +227,9 @@ o....
 .....
 .....
 ```
-### Deuxieme Ètape :
+### Deuxieme √©tape :
 
-Il faudra dans un deuxi?me temps pouvoir dÈplacer le personnage. Une fois la premi?re Ètape est que tu as ce rÈsultat : 
+Il faudra dans un deuxi?me temps pouvoir d√©placer le personnage. Une fois la premi?re √©tape est que tu as ce r√©sultat : 
 
 ``` 
 o....    
@@ -288,5 +288,72 @@ o....
 .....
 ```
 
-Ce n'est pas grave si Áa ne clear pas la console mais si je met dans ma console "exit" mon programme s'arr?te.
+Ce n'est pas grave si √ßa ne clear pas la console mais si je met dans ma console "exit" mon programme s'arr√™te.
 
+### Deuxi√®me exercice: 
+
+- Ajouter une fonctionnalit√© qui efface le tableau pr√©c√©dent.
+
+``` java
+	System.out.print("\033[H\033[2J");  
+        System.out.flush();
+
+```
+
+Cette m√©thode ne marchera pas pas sur la console d'eclipse mais si on build le jar et qu'on le lance via un console √ßa marchera bien.
+
+- Ajouter un caract√®re 'm' sur le terrain al√©atoirement si on le personnage touche le 'm' on cr√©√© une nouvelle map o√π l'on place un nombre al√©atoire de monstre sur la partie droite (entre 1 et 4).
+
+
+``` 
+o.m..    
+.....    
+.....
+.....
+.....
+```
+
+``` 
+.om..    
+.....    
+.....
+.....
+.....
+```
+``` 
+..o..    
+.....    
+.....
+.....
+.....
+```
+``` 
+.....    
+...m.    
+.o.m.
+...m.
+.....
+```
+
+- Ajouter un nombre de point de vie de 100 pour le h√©ro et 5 point de d√©gat. Pour les monstres chacun a 20 hp et 2 points de d√©gat.
+
+``` 
+.....    
+...m.    
+.o.m.
+...m.
+.....
+h√©ro :
+hp: 100/100 
+dps: 5 
+monstre 1 :     monstre 2 :    monstre 3 :
+hp: 20/20       hp: 20/20      hp: 20/20
+dps: 2          dps: 2         dps: 2 
+```
+- En combat vous attaquez un monstre en tapant "attack 1" pour attaquer le premier monstre ou "attack 2" pour le second etc .. et les monstres vous infligent √©galement des d√©gats pendant cette action.
+- Si tout monstres sont morts afficher "victory" et revenir sur la map en 0,0.
+- Si le h√©ro est mort afficher "Game over" et revenir sur la map en 0,0.
+
+https://www.journaldunet.fr/web-tech/developpement/1202399-comment-generer-un-nombre-aleatoire-random-en-java-compris-entre-deux-chiffres/
+
+<b>BON COURAGE!</b>

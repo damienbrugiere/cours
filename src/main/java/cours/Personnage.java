@@ -46,7 +46,9 @@ public class Personnage {
     }
 
     public void attack(Personnage personnage) {
-        personnage.takeDmg(this.dmg);
+    	if(this.isAlive()) {
+    		personnage.takeDmg(this.dmg);    		
+    	}
     }
 
     public void setX(int x) {
@@ -74,4 +76,8 @@ public class Personnage {
     public void reinitialise(){
         this.fightLife = hp;
     }
+    
+    public String getName() {
+		return name;
+	}
 }

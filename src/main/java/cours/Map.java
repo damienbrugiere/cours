@@ -1,12 +1,11 @@
 package cours;
 
 public class Map extends  AbstractMap{
-    private Personnage player;
     private int x,y;
-
+    private Personnage player;
     public Map(int longueur, int largeur, Personnage player) {
-        super(longueur, largeur);
-        this.player = player;
+        super(longueur, largeur,player);
+        this.player =player;
         this.x = 4;
         this.y = 3;
 

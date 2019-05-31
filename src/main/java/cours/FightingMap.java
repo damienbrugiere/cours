@@ -1,34 +1,41 @@
 package cours;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class FightingMap extends AbstractMap {
-    private Personnage player;
     private List<Personnage> monsters;
-
+    private List<Personnage> players;
     public FightingMap(int longueur, int largeur, Personnage player, List<Personnage> monsters) {
-        super(longueur, largeur);
-        this.player = player;
+        super(longueur, largeur,player);
         this.monsters = monsters;
+        this.players = Arrays.asList(player);
     }
 
     @Override
     public boolean action(String userCommand) {
         this.monsters.forEach(m->map[m.getX()][m.getY()]='m');
-        this.map[player.getX()][player.getY()]='o';
+        this.players.forEach(p->map[p.getX()][p.getY()]='0');
         if(userCommand == null){
             return false;
         }
         if (userCommand.contains("attack")) {
             String number = userCommand.substring(7, 8);
-            if (number == null) {
-                return false;
-            }
-            Personnage m = monsters.get(0);
-            player.attack(m);
+            String[] test = userCommand.split(" attack ");
+            Personnage player = this.players.stream().filter(p -> test[0].equals(p.getName())).findFirst().get();
+            Personnage monster = this.monsters.stream().filter(p -> test[1].equals(p.getName())).findFirst().get();
+            player.attack(monster);
         }
-        monsters.forEach(m-> m.attack(player));
-        if (!player.isAlive()) {
+        monsters.forEach(m->{ 
+        	List<Personnage> playersAlive = this.players.stream().filter(p -> p.isAlive() ).collect(Collectors.toList());
+        	if(playersAlive == null || playersAlive.isEmpty()) {
+        		return;
+        	}
+        	 int nombreAleatoire = (int)(Math.random() * ((playersAlive.size()-1 )));
+        	 m.attack(playersAlive.get(nombreAleatoire));
+        	});
+        if (players.stream().allMatch(p -> !p.isAlive())) {
             System.out.println("Loose!");
             return true;
         }
@@ -43,7 +50,7 @@ public class FightingMap extends AbstractMap {
     @Override
     public void displayMap() {
         super.displayMap();
-        player.displayInformation();
+        players.forEach(p -> p.displayInformation());
         monsters.forEach(m -> m.displayInformation());
     }
 }

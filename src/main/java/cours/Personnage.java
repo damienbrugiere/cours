@@ -17,26 +17,6 @@ public class Personnage {
         this.fightLife = hp;
     }
 
-    public void left() {
-        if (this.y != 0)
-            this.y--;
-    }
-
-    public void right(int max) {
-        if (this.y != max)
-            this.y++;
-    }
-
-    public void top() {
-        if (this.x != 0)
-            this.x--;
-    }
-
-    public void bottom(int max) {
-        if (this.x != max)
-            this.x++;
-    }
-
     public int getX() {
         return x;
     }

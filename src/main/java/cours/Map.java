@@ -2,10 +2,8 @@ package cours;
 
 public class Map extends  AbstractMap{
     private int x,y;
-    private Personnage player;
-    public Map(int longueur, int largeur, Personnage player) {
+    public Map(int longueur, int largeur, Player player) {
         super(longueur, largeur,player);
-        this.player =player;
         this.x = 4;
         this.y = 3;
 
@@ -34,6 +32,7 @@ public class Map extends  AbstractMap{
         if(this.map[player.getX()][player.getY()]!='m'){
             this.map[player.getX()][player.getY()]='o';
         }else{
+        
             this.map[player.getX()][player.getY()]='o';
             return true;
         }

@@ -1,16 +1,15 @@
 package cours;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class FightingMap extends AbstractMap {
     private List<Personnage> monsters;
     private List<Personnage> players;
-    public FightingMap(int longueur, int largeur, Personnage player, List<Personnage> monsters) {
+    public FightingMap(int longueur, int largeur, Player player, List<Personnage> monsters) {
         super(longueur, largeur,player);
         this.monsters = monsters;
-        this.players = Arrays.asList(player);
+        this.players = player.getTeam();
     }
 
     @Override
@@ -48,8 +47,8 @@ public class FightingMap extends AbstractMap {
     }
 
     @Override
-    public void displayMap() {
-        super.displayMap();
+    public void display() {
+        super.display();
         players.forEach(p -> p.displayInformation());
         monsters.forEach(m -> m.displayInformation());
     }

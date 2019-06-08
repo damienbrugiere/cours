@@ -14,12 +14,12 @@ public abstract class ScreenFactory {
 	}
 
 	public static FightingMap passToFightingMap(Screen map) {
-		List<Personnage> monsters = new ArrayList<>();
+		List<Monster> monsters = new ArrayList<>();
     	map.player.reinitialise();
     	 int nombreAleatoire = 1 + (int)(Math.random() * ((4 - 1) + 1));
          map.player.updateCoordonate(3, 1);
          for (int i = 0 ; i < nombreAleatoire; i ++) {
-             monsters.add(new Personnage("monster"+i, 4-i, 3, 20, 5));
+             monsters.add(new Monster("monster"+i, 4-i, 3, 20));
          }
     	FightingMap mapReturn =new FightingMap(map.longueur, map.largeur, map.player, monsters);
     	mapReturn.initialiseMap();

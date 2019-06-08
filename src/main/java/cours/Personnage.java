@@ -1,18 +1,20 @@
 package cours;
 
-public class Personnage {
+import java.util.List;
+import java.util.Optional;
+
+public abstract class Personnage {
     private String name;
     private int x;
     private int y;
     private int hp;
-    private int dmg;
+	private List<Skill> skills;
     private int fightLife;
 
-    public Personnage(String name, int x, int y, int hp, int dmg) {
+    protected Personnage(String name, int x, int y, int hp) {
         this.x = x;
         this.y = y;
         this.hp = hp;
-        this.dmg = dmg;
         this.name = name;
         this.fightLife = hp;
     }
@@ -24,13 +26,7 @@ public class Personnage {
     public int getY() {
         return y;
     }
-
-    public void attack(Personnage personnage) {
-    	if(this.isAlive()) {
-    		personnage.takeDmg(this.dmg);    		
-    	}
-    }
-
+    
     public void setX(int x) {
         this.x = x;
     }
@@ -50,7 +46,7 @@ public class Personnage {
     }
 
     public void displayInformation() {
-        System.out.println(this.name + " :\nhp : " + this.fightLife + "/" + this.hp + "\ndmg : " + this.dmg);
+        System.out.println(this.name + " :\nhp : " + this.fightLife + "/" + this.hp);
     }
 
     public void reinitialise(){
@@ -59,5 +55,24 @@ public class Personnage {
     
     public String getName() {
 		return name;
+	}
+    
+    public int getFightLife() {
+		return fightLife;
+	}
+    public void heal(int heal) {
+    	if(this.isAlive()) {
+    		this.fightLife+=heal;
+    		if(this.fightLife>this.hp) {
+    			this.fightLife = this.hp;
+    		}
+    	}
+    }
+    
+	public void attackWithSkill(String name, List<Hero> heroes,List<Monster> monsters){
+		Optional<Skill> skillOptional = this.skills.stream().filter(iterator -> iterator.getName().equals(name)).findFirst();
+		if(skillOptional.isPresent()) {
+			skillOptional.get().action(heroes,monsters);
+		}
 	}
 }

@@ -1,5 +1,6 @@
 package cours;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -10,7 +11,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		Player player = new Player( 0, 0, Arrays.asList(new Personnage("soldier", 0, 0, 100, 20)));
+		Player player = new Player( 0, 0, 500,new ArrayList<>( Arrays.asList(new Hero("soldier", 0, 0, 100,10))));
 		Screen map = new Map(5, 5, player);
 		Scanner scanner = new Scanner(System.in);
 		String userCommand = null;

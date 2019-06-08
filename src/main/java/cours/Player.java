@@ -11,21 +11,28 @@ import java.util.List;
  */
 public class Player {
 	private int x, y;
-	private List<Personnage> team;
+	private int gold;
+	private List<Hero> team;
 
-	public Player(int x, int y, List<Personnage> team) {
+	public Player(int x, int y, int gold, List<Hero> team) {
 		super();
 		this.x = x;
 		this.y = y;
+		this.gold = gold;
 		this.team = team;
 	}
 
-	public List<Personnage> getTeam() {
+	public List<Hero> getTeam() {
 		return team;
 	}
 
-	public void purchasePersonnage(Personnage personnage) {
-		this.team.add(personnage);
+	public boolean purchasePersonnage(Hero personnage) {
+		if (this.gold - personnage.getPrice() >= 0) {
+			this.gold -= personnage.getPrice();
+			this.team.add(personnage);
+			return true;
+		}
+		return false;
 	}
 
 	public void removePersonnage(String name) {
@@ -49,23 +56,27 @@ public class Player {
 		return x;
 	}
 
-    public void left() {
-        if (this.y != 0)
-            this.y--;
-    }
+	public void left() {
+		if (this.y != 0)
+			this.y--;
+	}
 
-    public void right(int max) {
-        if (this.y != max)
-            this.y++;
-    }
+	public void right(int max) {
+		if (this.y != max)
+			this.y++;
+	}
 
-    public void top() {
-        if (this.x != 0)
-            this.x--;
-    }
+	public void top() {
+		if (this.x != 0)
+			this.x--;
+	}
 
-    public void bottom(int max) {
-        if (this.x != max)
-            this.x++;
-    }
+	public void bottom(int max) {
+		if (this.x != max)
+			this.x++;
+	}
+
+	public int getGold() {
+		return gold;
+	}
 }

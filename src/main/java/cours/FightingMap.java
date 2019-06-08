@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class FightingMap extends AbstractMap {
-    private List<Personnage> monsters;
-    private List<Personnage> players;
-    public FightingMap(int longueur, int largeur, Player player, List<Personnage> monsters) {
+    private List<Monster> monsters;
+    private List<Hero> players;
+    public FightingMap(int longueur, int largeur, Player player, List<Monster> monsters) {
         super(longueur, largeur,player);
         this.monsters = monsters;
         this.players = player.getTeam();
@@ -24,7 +24,7 @@ public class FightingMap extends AbstractMap {
             String[] test = userCommand.split(" attack ");
             Personnage player = this.players.stream().filter(p -> test[0].equals(p.getName())).findFirst().get();
             Personnage monster = this.monsters.stream().filter(p -> test[1].equals(p.getName())).findFirst().get();
-            player.attack(monster);
+//            player.attack(monster);
         }
         monsters.forEach(m->{ 
         	List<Personnage> playersAlive = this.players.stream().filter(p -> p.isAlive() ).collect(Collectors.toList());
@@ -32,7 +32,7 @@ public class FightingMap extends AbstractMap {
         		return;
         	}
         	 int nombreAleatoire = (int)(Math.random() * ((playersAlive.size()-1 )));
-        	 m.attack(playersAlive.get(nombreAleatoire));
+//        	 m.attack(playersAlive.get(nombreAleatoire));
         	});
         if (players.stream().allMatch(p -> !p.isAlive())) {
             System.out.println("Loose!");
